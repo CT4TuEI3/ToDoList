@@ -11,6 +11,7 @@
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAction;
 
 @end
 
@@ -18,8 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.buttonAction addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)save {
+    
+}
 
 @end

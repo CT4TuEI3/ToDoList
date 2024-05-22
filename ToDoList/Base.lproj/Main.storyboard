@@ -102,6 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EHw-RU-73Z"/>
                     <connections>
+                        <outlet property="buttonAction" destination="R4k-TP-NMH" id="kXZ-pM-RWe"/>
                         <outlet property="datePicker" destination="ACb-yr-x8e" id="cxu-Pp-uBy"/>
                         <outlet property="textField" destination="STS-HN-ja3" id="vJm-fq-RnV"/>
                     </connections>
