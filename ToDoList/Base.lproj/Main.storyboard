@@ -59,21 +59,56 @@
             </objects>
             <point key="canvasLocation" x="-1648" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STS-HN-ja3">
+                                <rect key="frame" x="16" y="183" width="361" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="bBh-X9-Sbh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ACb-yr-x8e">
+                                <rect key="frame" x="16" y="287" width="361" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="R9e-jM-tfX"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4k-TP-NMH">
+                                <rect key="frame" x="166" y="759" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="STS-HN-ja3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="2HQ-qB-oLS"/>
+                            <constraint firstItem="ACb-yr-x8e" firstAttribute="top" secondItem="STS-HN-ja3" secondAttribute="bottom" constant="56" id="9Cz-Hk-BLq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R4k-TP-NMH" secondAttribute="bottom" constant="24" id="BCC-RF-3Dt"/>
+                            <constraint firstAttribute="trailing" secondItem="ACb-yr-x8e" secondAttribute="trailing" constant="16" id="MHe-db-nHr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STS-HN-ja3" secondAttribute="trailing" constant="16" id="Oi6-Jq-4kC"/>
+                            <constraint firstItem="ACb-yr-x8e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T9u-ym-N6c"/>
+                            <constraint firstItem="STS-HN-ja3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="baj-70-AGo"/>
+                            <constraint firstItem="R4k-TP-NMH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ciU-mL-qoV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EHw-RU-73Z"/>
+                    <connections>
+                        <outlet property="datePicker" destination="ACb-yr-x8e" id="cxu-Pp-uBy"/>
+                        <outlet property="textField" destination="STS-HN-ja3" id="vJm-fq-RnV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-2"/>
+            <point key="canvasLocation" x="116.79389312977099" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
