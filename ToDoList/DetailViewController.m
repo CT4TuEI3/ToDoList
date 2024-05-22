@@ -19,6 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
+    [self datePickerSettings];
+}
+
+- (void)setupUI {
     [self.buttonAction addTarget:self
                           action:@selector(save)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -27,13 +32,27 @@
     [self.view addGestureRecognizer:handleTap];
 }
 
+- (void)datePickerSettings {
+    self.datePicker.minimumDate = [NSDate date];
+   [self.datePicker addTarget:self
+                        action:@selector(datePickerValueChanged)
+              forControlEvents:(UIControlEventValueChanged)];
+}
+
+
+
 - (void)save {
     
 }
 
 - (void)handleEndEditing {
-    [self.view endEditing:YES];    
+    [self.view endEditing:YES];
 }
+
+- (void)datePickerValueChanged {
+    self.eventDate = self.datePicker.date;
+}
+
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
