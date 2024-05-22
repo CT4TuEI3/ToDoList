@@ -73,7 +73,10 @@
                                     <constraint firstAttribute="height" constant="48" id="bBh-X9-Sbh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Vzf-Dd-HC2"/>
+                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ACb-yr-x8e">
                                 <rect key="frame" x="16" y="287" width="361" height="56"/>
