@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32078B4A2C09155200D87367 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32078B492C09155200D87367 /* MainTableViewController.m */; };
 		32761C212BFBDEF900634AC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32761C202BFBDEF900634AC6 /* AppDelegate.m */; };
 		32761C242BFBDEF900634AC6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32761C232BFBDEF900634AC6 /* SceneDelegate.m */; };
 		32761C272BFBDEF900634AC6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32761C262BFBDEF900634AC6 /* DetailViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32078B482C09155200D87367 /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		32078B492C09155200D87367 /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		32761C1C2BFBDEF800634AC6 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32761C1F2BFBDEF800634AC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32761C202BFBDEF900634AC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				32761C232BFBDEF900634AC6 /* SceneDelegate.m */,
 				32761C252BFBDEF900634AC6 /* DetailViewController.h */,
 				32761C262BFBDEF900634AC6 /* DetailViewController.m */,
+				32078B482C09155200D87367 /* MainTableViewController.h */,
+				32078B492C09155200D87367 /* MainTableViewController.m */,
 				32761C282BFBDEF900634AC6 /* Main.storyboard */,
 				32761C2B2BFBDEFC00634AC6 /* Assets.xcassets */,
 				32761C2D2BFBDEFC00634AC6 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 				32761C272BFBDEF900634AC6 /* DetailViewController.m in Sources */,
 				32761C212BFBDEF900634AC6 /* AppDelegate.m in Sources */,
 				32761C322BFBDEFC00634AC6 /* main.m in Sources */,
+				32078B4A2C09155200D87367 /* MainTableViewController.m in Sources */,
 				32761C242BFBDEF900634AC6 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
