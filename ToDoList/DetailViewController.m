@@ -24,6 +24,8 @@
 }
 
 - (void)setupUI {
+    self.buttonAction.userInteractionEnabled = NO;
+    self.buttonAction.alpha = 0.5;
     [self.buttonAction addTarget:self
                           action:@selector(save)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -34,7 +36,7 @@
 
 - (void)datePickerSettings {
     self.datePicker.minimumDate = [NSDate date];
-   [self.datePicker addTarget:self
+    [self.datePicker addTarget:self
                         action:@selector(datePickerValueChanged)
               forControlEvents:(UIControlEventValueChanged)];
 }
@@ -42,6 +44,20 @@
 
 
 - (void)save {
+    if (self.eventDate) {
+        if ([self.eventDate compare: [NSDate date]] == NSOrderedSame) {
+            [self showAlertWithMessage:@"Дата будущего события не может совпадать с текущей датой"];
+        } else if ([self.eventDate compare: [NSDate date]] == NSOrderedAscending) {
+            [self showAlertWithMessage:@"Дата будущего события не может быть ранее текущей"];
+        } else {
+            [self setNotification];
+        }
+    } else {
+        [self showAlertWithMessage:@"Для сохранения события, измените значение даты"];
+    }
+}
+
+- (void)setNotification {
     NSString * eventInfo = self.textField.text;
     NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"HH:mm dd.MMMM.yyyy";
@@ -60,20 +76,45 @@
 }
 
 - (void)handleEndEditing {
-    [self.view endEditing:YES];
+    if ([self.textField.text length] != 0) {
+        [self.view endEditing:YES];
+        self.buttonAction.userInteractionEnabled = YES;
+        self.buttonAction.alpha = 1;
+    } else {
+        [self showAlertWithMessage:@"Для сохранения события, введите значение в текстовое поле"];
+    }
 }
 
 - (void)datePickerValueChanged {
     self.eventDate = self.datePicker.date;
 }
 
-
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([textField isEqual:self.textField]) {
-        [self.textField resignFirstResponder];
+    if ([textField isEqual:(self.textField)]) {
+        if ([self.textField.text length] != 0) {
+            [self.textField resignFirstResponder];
+            self.buttonAction.userInteractionEnabled = YES;
+            self.buttonAction.alpha = 1;
+            return YES;
+        } else {
+            [self showAlertWithMessage:@"Для сохранения события, введите значение в текстовое поле"];
+        }
     }
-    return  YES;
+    return  NO;
 }
+
+- (void)showAlertWithMessage : (NSString *) message{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle: @"Внимание"
+                                 message: message
+                                 preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction * okAction = [UIAlertAction
+                                actionWithTitle: @"Ok"
+                                style: UIAlertActionStyleDefault
+                                handler: nil];
+    [alert addAction: okAction];
+    [self presentViewController: alert animated: YES completion: nil];
+}
+
 
 @end
