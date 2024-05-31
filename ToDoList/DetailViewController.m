@@ -19,8 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupUI];
-    [self datePickerSettings];
+    if (self.isDetail) {
+        self.textField.text = self.eventInfo;
+        self.datePicker.date = self.eventDate;
+    } else {
+        [self setupUI];
+        [self datePickerSettings];
+    }
 }
 
 - (void)setupUI {

@@ -7,6 +7,7 @@
 
 
 #import "MainTableViewController.h"
+#import "DetailViewController.h"
 
 @interface MainTableViewController ()
 
@@ -39,6 +40,17 @@
     cell.textLabel.text = [dict objectForKey:@"eventInfo"];
     cell.detailTextLabel.text = [dict objectForKey:@"eventDate"];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UILocalNotification * notification = [self.arrayEvents objectAtIndex:indexPath.row];
+    NSDictionary * dict = notification.userInfo;
+    DetailViewController * detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailView"];
+    detailVC.eventInfo = [dict objectForKey:@"eventInfo"];
+    detailVC.eventDate = notification.fireDate;
+    detailVC.isDetail = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 
