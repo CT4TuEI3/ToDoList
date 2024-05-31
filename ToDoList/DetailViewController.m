@@ -21,7 +21,13 @@
     [super viewDidLoad];
     if (self.isDetail) {
         self.textField.text = self.eventInfo;
+        self.textField.userInteractionEnabled = NO;
         self.datePicker.date = self.eventDate;
+        self.datePicker.userInteractionEnabled = NO;
+        self.buttonAction.alpha = 0;
+        [self performSelector:@selector(setDatePickerValueWithAnimation)
+                   withObject:nil
+                   afterDelay:0.5];
     } else {
         [self setupUI];
         [self datePickerSettings];
@@ -46,6 +52,9 @@
               forControlEvents:(UIControlEventValueChanged)];
 }
 
+- (void)setDatePickerValueWithAnimation {
+    [self.datePicker setDate:self.eventDate animated:YES];
+}
 
 
 - (void)save {
@@ -78,6 +87,7 @@
     notification.applicationIconBadgeNumber = 1;
     notification.soundName = UILocalNotificationDefaultSoundName;
     [[UIApplication sharedApplication]scheduleLocalNotification:notification];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)handleEndEditing {
