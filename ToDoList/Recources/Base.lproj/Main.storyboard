@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--To-Do List-->
         <scene sceneID="9ft-i5-9SC">
             <objects>
                 <tableViewController id="0fy-HT-eya" customClass="MainTableViewController" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="0fy-HT-eya" id="mbX-Ha-L0W"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Qjl-oj-w3e">
+                    <navigationItem key="navigationItem" title="To-Do List" id="Qjl-oj-w3e">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xCj-Ct-X8Z">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="f8a-Qw-beH"/>
@@ -63,8 +63,8 @@
         <scene sceneID="kRV-J3-bxn">
             <objects>
                 <navigationController id="IQm-Ol-SYz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="49a-xL-Lwn">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="49a-xL-Lwn">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -84,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STS-HN-ja3">
-                                <rect key="frame" x="16" y="183" width="361" height="48"/>
+                                <rect key="frame" x="16" y="235" width="361" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="bBh-X9-Sbh"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ACb-yr-x8e">
-                                <rect key="frame" x="16" y="287" width="361" height="56"/>
+                                <rect key="frame" x="16" y="339" width="361" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="R9e-jM-tfX"/>
                                 </constraints>

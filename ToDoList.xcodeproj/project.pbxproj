@@ -64,21 +64,61 @@
 		32761C1E2BFBDEF800634AC6 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				32ACD1EA2C09E65400A3D8F8 /* Core */,
+				32ACD1EB2C09E68500A3D8F8 /* Recources */,
+				32ACD1EC2C09E6D300A3D8F8 /* Modules */,
+			);
+			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		32ACD1EA2C09E65400A3D8F8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				32761C312BFBDEFC00634AC6 /* main.m */,
 				32761C1F2BFBDEF800634AC6 /* AppDelegate.h */,
 				32761C202BFBDEF900634AC6 /* AppDelegate.m */,
 				32761C222BFBDEF900634AC6 /* SceneDelegate.h */,
 				32761C232BFBDEF900634AC6 /* SceneDelegate.m */,
-				32761C252BFBDEF900634AC6 /* DetailViewController.h */,
-				32761C262BFBDEF900634AC6 /* DetailViewController.m */,
-				32078B482C09155200D87367 /* MainTableViewController.h */,
-				32078B492C09155200D87367 /* MainTableViewController.m */,
+				32761C302BFBDEFC00634AC6 /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		32ACD1EB2C09E68500A3D8F8 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
 				32761C282BFBDEF900634AC6 /* Main.storyboard */,
 				32761C2B2BFBDEFC00634AC6 /* Assets.xcassets */,
 				32761C2D2BFBDEFC00634AC6 /* LaunchScreen.storyboard */,
-				32761C302BFBDEFC00634AC6 /* Info.plist */,
-				32761C312BFBDEFC00634AC6 /* main.m */,
 			);
-			path = ToDoList;
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		32ACD1EC2C09E6D300A3D8F8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				32ACD1ED2C09E6DB00A3D8F8 /* Main */,
+				32ACD1EE2C09E6DF00A3D8F8 /* Detail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		32ACD1ED2C09E6DB00A3D8F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				32078B482C09155200D87367 /* MainTableViewController.h */,
+				32078B492C09155200D87367 /* MainTableViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		32ACD1EE2C09E6DF00A3D8F8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				32761C252BFBDEF900634AC6 /* DetailViewController.h */,
+				32761C262BFBDEF900634AC6 /* DetailViewController.m */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YV72SAKGKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_FILE = ToDoList/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YV72SAKGKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_FILE = ToDoList/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

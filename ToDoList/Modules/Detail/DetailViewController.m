@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (self.isDetail) {
+        self.navigationItem.title = @"Detail";
         self.textField.text = self.eventInfo;
         self.textField.userInteractionEnabled = NO;
         self.datePicker.date = self.eventDate;
@@ -35,6 +36,7 @@
 }
 
 - (void)setupUI {
+    self.navigationItem.title = @"Create";
     self.buttonAction.userInteractionEnabled = NO;
     self.buttonAction.alpha = 0.5;
     [self.buttonAction addTarget:self
@@ -131,6 +133,5 @@
     [alert addAction: okAction];
     [self presentViewController: alert animated: YES completion: nil];
 }
-
 
 @end
